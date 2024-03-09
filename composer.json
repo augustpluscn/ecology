@@ -7,7 +7,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Jmcc\\Ecology\\": "src/Ecology"
+            "Jmcc\\Ecology\\": "src/"
         }
     },
     "authors": [
