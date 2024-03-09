@@ -1,5 +1,5 @@
 <?php
-namespace Ecology;
+namespace Jmcc\Ecology;
 
 use Ecology\Traits\HasHttpRequests;
 

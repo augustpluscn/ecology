@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecology;
+namespace Jmcc\Ecology;
 
 class OaMessage
 {
@@ -13,13 +13,6 @@ class OaMessage
 
     public function sendMsg($workCodeList, $title, $content, $code = null, $linkUrl = null)
     {
-        // $body = [
-        //     'code' => 518,
-        //     'workCodeList' => 'C0879',
-        //     'title' => '测试标题',
-        //     'context' => '测试内容',
-        //     'linkUrl' => 'https://www.baidu.com/',
-        // ];
         $body = [
             'code' => $code,
             'workCodeList' => $workCodeList,

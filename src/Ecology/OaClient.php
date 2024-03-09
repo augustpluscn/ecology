@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecology;
+namespace Jmcc\Ecology;
 
 use Illuminate\Support\Facades\Cache;
 

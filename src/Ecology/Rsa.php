@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecology;
+namespace Jmcc\Ecology;
 
 class Rsa
 {

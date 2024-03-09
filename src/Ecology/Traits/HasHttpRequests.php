@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Ecology\Traits;
+namespace Jmcc\Ecology\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
