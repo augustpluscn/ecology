@@ -1,7 +1,7 @@
 <?php
 namespace Jmcc\Ecology;
 
-use Ecology\Traits\HasHttpRequests;
+use Jmcc\Ecology\Traits\HasHttpRequests;
 
 abstract class BaseClient
 {
