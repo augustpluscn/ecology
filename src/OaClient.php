@@ -44,7 +44,7 @@ class OaClient extends BaseClient
                 throw new \Exception($body->msg);
             }
             $token = $body->token;
-            \Cache::put('token', $token, $this->timeout);
+            \Cache::put('accessToken', $token, $this->timeout);
         }
 
         return $token;
