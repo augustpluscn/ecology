@@ -11,7 +11,7 @@ class OaMessage
         $this->http = new OaClient();
     }
 
-    public function sendMsg($workCodeList, $title, $content, $code = null, $linkUrl = null)
+    public function sendMsg($workCodeList, $title, $content, $code = null, $linkUrl = null, $linkMobileUrl = null)
     {
         $body = [
             'code' => $code,
@@ -19,6 +19,7 @@ class OaMessage
             'title' => $title,
             'context' => $content,
             'linkUrl' => $linkUrl,
+            'linkMobileUrl' => $linkMobileUrl,
         ];
         return $this->http->httpPost('api/ec/dev/message/sendCustomMessageSingle', $body);
     }
