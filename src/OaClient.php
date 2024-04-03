@@ -16,7 +16,7 @@ class OaClient extends BaseClient
     {
         $this->baseUri = config('oa.uri');
         $this->appId = config('oa.appid');
-        $this->timeout = config('oa.timeout', 86400);
+        $this->timeout = config('oa.timeout', 1800);
         $this->userid = config('oa.userid', '600');
         $this->accessToken = $this->getToken();
     }
