@@ -12,6 +12,12 @@ class OaClient extends BaseClient
     protected $timeout;
     protected $userid;
 
+    public function __construct($userid = null)
+    {
+        $this->init();
+        $this->userid = $userid ?? $this->userid;
+    }
+
     protected function init(): void
     {
         $this->baseUri = config('oa.uri');
@@ -77,12 +83,12 @@ class OaClient extends BaseClient
     {
         $reg = Cache::get('reg');
         $rsa = new Rsa('', '', '', $reg->spk);
-        $userid = $rsa->publicEncrypt($this->userid);
+        $userEncrypt = $rsa->publicEncrypt($this->userid);
 
         $arr = [
             'appid' => $this->appId,
             'token' => $this->accessToken,
-            'userid' => $userid,
+            'userid' => $userEncrypt,
             // 'Content-Type' => 'application/x-www-form-urlencoded;charset=utf-8',
         ];
         return array_merge($arr, $header);

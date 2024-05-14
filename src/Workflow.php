@@ -6,9 +6,9 @@ class Workflow
 {
     protected $http;
 
-    public function __construct()
+    public function __construct($userid = null)
     {
-        $this->http = new OaClient();
+        $this->http = new OaClient($userid);
     }
 
     public function create(int $workflowId, string $requestName, array $mainData, array $detailData = null, array $otherParams = null, string $remark = null, string $requestLevel = null)
