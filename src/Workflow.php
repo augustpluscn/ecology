@@ -11,7 +11,7 @@ class Workflow
         $this->http = new OaClient($userid);
     }
 
-    public function create(int $workflowId, string $requestName, array $mainData, array $detailData = null, array $otherParams = null, string $remark = null, string $requestLevel = null)
+    public function create(int $workflowId, string $requestName, string $mainData, string $detailData = null, string $otherParams = null, string $remark = null, string $requestLevel = null)
     {
         $body = [
             'workflowId' => $workflowId,
