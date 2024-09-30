@@ -83,7 +83,7 @@ class OaClient extends BaseClient
     {
         $reg = Cache::get('reg');
         $rsa = new Rsa('', '', '', $reg->spk);
-        $userEncrypt = $rsa->publicEncrypt($this->userid);
+        $userEncrypt = $rsa->publicEncrypt((string)$this->userid);
 
         $arr = [
             'appid' => $this->appId,
